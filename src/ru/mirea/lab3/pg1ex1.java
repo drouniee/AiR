@@ -10,7 +10,7 @@ public class pg1ex1 {
         double[] array1 = new double[size];
         Random rand = new Random();
         for (int i = 0; i < size; i++) {
-            array1[i] = rand.nextDouble() * 100;
+            array1[i] = rand.nextInt(100);
         }
         System.out.println("До сортировки: " + Arrays.toString(array1));
         Arrays.sort(array1);
