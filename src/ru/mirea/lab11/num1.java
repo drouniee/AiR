@@ -6,9 +6,7 @@ import java.text.SimpleDateFormat;
 
 public class num1 {
     public static void main(String[] args) {
-        Calendar cal = Calendar.getInstance();
-        cal.set(2002, Calendar.AUGUST, 31, 0, 0, 0);
-        Date gettind_task = cal.getTime();
+        Date gettind_task = new Date();
         Date completing_task = new Date();
 
         String developer = "Дружнов";
