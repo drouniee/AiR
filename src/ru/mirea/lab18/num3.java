@@ -18,12 +18,6 @@ public class num3 {
             System.out.println("Message: " + e.getMessage());
 
         }
-        /* catch (NumberFormatException e) {
-            System.out.println("Invalid input - not a number");
-
-        } catch (ArithmeticException e) {
-            System.out.println("Attempted division by zero");
-        } */
     }
 
     public static void main(String[] args) {
