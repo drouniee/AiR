@@ -1,4 +1,4 @@
-package ru.mirea.num19.num2;
+package ru.mirea.lab19.num2;
 
 public class Student implements Comparable<Student> {
     private String fullName;

@@ -1,4 +1,4 @@
-package ru.mirea.num19.num1;
+package ru.mirea.lab19.num1;
 
 public class InvalidINNException extends Exception {
     public InvalidINNException(String message) {
