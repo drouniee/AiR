@@ -16,17 +16,24 @@ public class num2 {
 
         try {
             Date userDate = dateFormatter.parse(userInput);
-
             Date currentDate = new Date();
-            String currentDateStr = dateFormatter.format(currentDate);
-            currentDate = dateFormatter.parse(currentDateStr);
 
-            System.out.println("Текущая дата: " + dateFormatter.format(currentDate));
-            System.out.println("Введенная дата: " + dateFormatter.format(userDate));
+            // Создаем SimpleDateFormat для отображения полной даты с временем
+            SimpleDateFormat fullDateFormatter = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss.SSS");
 
-            if (userDate.equals(currentDate)) {
-                System.out.println("Даты равны");
-            } else if (userDate.before(currentDate)) {
+            System.out.println("Текущая дата и время: " + fullDateFormatter.format(currentDate));
+            System.out.println("Введенная дата: " + fullDateFormatter.format(userDate));
+
+            // Сравниваем даты в миллисекундах
+            long userTime = userDate.getTime();
+            long currentTime = currentDate.getTime();
+
+            System.out.println("Текущая дата в мс: " + currentTime);
+            System.out.println("Введенная дата в мс: " + userTime);
+
+            if (userTime == currentTime) {
+                System.out.println("Даты РАВНЫ (вплоть до миллисекунд)");
+            } else if (userTime < currentTime) {
                 System.out.println("Введенная дата РАНЬШЕ текущей");
             } else {
                 System.out.println("Введенная дата ПОЗЖЕ текущей");
