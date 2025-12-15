@@ -60,8 +60,8 @@ class AnimatedShapesWindow extends JFrame {
         for (int i = 0; i < shapes.length; i++) {
             Color color = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 
-            int x = random.nextInt(350);
-            int y = random.nextInt(350);
+            int x = random.nextInt(450);
+            int y = 100 + random.nextInt(400);
 
             int shapeType = random.nextInt(3); // 0 - круг, 1 - прямоугольник, 2 - треугольник
 
@@ -94,14 +94,14 @@ class AnimatedShapesWindow extends JFrame {
                 if (i % 4 == 0) {
                     // Горизонтальное движение
                     newX += 3 * directions[i];
-                    if (newX > 400 || newX < 0) {
+                    if (newX > 450 || newX < 0) {
                         directions[i] *= -1;
                     }
                 }
                 else if (i % 4 == 1) {
                     // Вертикальное движение
                     newY += 2 * directions[i];
-                    if (newY > 400 || newY < 0) {
+                    if (newY > 500 || newY < 100) {
                         directions[i] *= -1;
                     }
                 }
@@ -109,7 +109,7 @@ class AnimatedShapesWindow extends JFrame {
                     // Движение по диагонали
                     newX += 4 * directions[i];
                     newY += 2 * directions[i];
-                    if (newX > 400 || newX < 0 || newY > 400 || newY < 0) {
+                    if (newX > 450 || newX < 0 || newY > 500 || newY < 100) {
                         directions[i] *= -1;
                     }
                 }
